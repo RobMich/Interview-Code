@@ -1,0 +1,16 @@
+' Convert input object to a string string
+' Run FormatJOSON() if the input is an array or associative array
+' Convert a node to an associative array and then call FormatJSON()
+' Ignore the input for any other type 
+function objectToJson(inputObj as Object) as string
+    stringOut = ""
+    inputType = Type(inputObj)
+    if inputType = "roArray" or inputType = "roAssociativeArray" then
+        stringOut = FormatJSON(inputObj)
+    else if inputType = "roSGNode" then
+        nodeArray = inputObj.getFields()
+        stringOut = FormatJSON(nodeArray)
+    end if
+
+    return stringOut
+end function
