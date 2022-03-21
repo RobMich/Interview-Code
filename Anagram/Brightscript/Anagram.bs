@@ -1,0 +1,49 @@
+' Function to see if two strings are anagrams
+function isAnagramCheck(string1 as string, string2 as string) as boolean
+    isValid = false
+    
+    ' remove any spaces from the strings
+    string1 = Ucase(string1.Replace(" ",""))
+    string2 = Ucase(string2.Replace(" ",""))
+    
+    ' If the clean strings are not the same length, then they are not a match
+    if string1.Len() = string2.Len() then
+        ' convert the first string to an array then sort the arrays
+        string1Array = string1.Split("")
+        string2Array = string2.Split("")
+        
+        string1Array.Sort()
+        string2Array.Sort()
+        
+        ? string1Array
+        ? string2Array
+        
+        ' now conver the sorted arrays back to strings and compare them
+        string1 = string1Array.join("")
+        string2 = string2Array.join("")
+
+        ? string1
+        ? string2
+        
+        if string1 = string2 then
+            isValid = true
+        end if
+        
+        'for i=0 to string1Array.Count() - 1
+        '    ' Validate that the character from string1 is in string2
+        '    ' If found, then remove the character from string2 and continue
+        '    for j=0 to string2Array.Count() - 1
+        '        if string2Array[j] = string1Array[i] then
+        '            string2Array.Delete(j)
+        '            isValid = true  
+        '            exit for
+        '        else
+        '            ' If the character is never found then it is not an anagram
+        '            isValid = false
+        '        end if
+        '    end for
+        'end for
+
+    end if
+    return isValid    
+end function
