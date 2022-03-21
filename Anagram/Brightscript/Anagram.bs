@@ -29,7 +29,6 @@ function isAnagramCheck(string1 as string, string2 as string) as boolean
             isValid = true
         end if
         
-        ' Remove this
         'for i=0 to string1Array.Count() - 1
         '    ' Validate that the character from string1 is in string2
         '    ' If found, then remove the character from string2 and continue
