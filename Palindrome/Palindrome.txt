@@ -1,0 +1,5 @@
+A palindrome is a word, sentence, or another type of character sequence which reads the same backward as forward. For example, “racecar” and “Anna” are palindromes. “Table” and “John” aren’t palindromes, because they don’t read the same from left to right and from right to left.
+
+You will be provided a string and return true or false.
+palindrome('racecar')  ===  true
+palindrome('table')  ===  false
