@@ -1,0 +1,15 @@
+The FizzBuzz challenge goes something like this. Write a function that does the following:
+
+console logs the numbers from 1 to n, where n is the integer the function takes as its parameter
+logs fizz instead of the number for multiples of 3
+logs buzz instead of the number for multiples of 5
+logs fizzbuzz for numbers that are multiples of both 3 and 5
+fizzBuzz(5)
+// 1
+// 2
+// fizz
+// 4
+// buzz
+
+Test Array:
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
